@@ -43,6 +43,12 @@ class ScoreCard():
             return self.get_game_state()
 
         # Store the current ball score if it's valid
+        try:
+            ko_pins = int(ko_pins)
+        except ValueError:
+            warnings.warn("Bad Pin Value.  Rejecting.")
+            return self.get_game_state()
+
         if self.__validate_bowl(ko_pins):
             self.frames[self.frame_idx]["bowls"].append(ko_pins)
             self.frames[self.frame_idx]["total"] += ko_pins
