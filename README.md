@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 The Warning message in the output is expected.
 
-### Playing the the file locally
+### Playing with the file locally
 ```python3```  
 ```from src.ScoreCard import ScoreCard```  
 ```sc = ScoreCard()```  
